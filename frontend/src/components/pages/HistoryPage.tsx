@@ -78,7 +78,7 @@ export default function HistoryPage({ emails, isLoading }: HistoryPageProps) {
   );
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:p-8 mt-4 md:mt-6">
+    <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
         Histórico de Emails
       </h2>

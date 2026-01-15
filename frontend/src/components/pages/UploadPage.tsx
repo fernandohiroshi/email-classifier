@@ -16,11 +16,11 @@ export default function UploadPage({ onEmailProcessed }: UploadPageProps) {
   );
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:p-8">
+    <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
         Processar Email
       </h2>
-      <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
+      <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
         Envie um arquivo ou cole o texto do email para classificação
       </p>
 

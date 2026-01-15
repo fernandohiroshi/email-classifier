@@ -1,7 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { Upload, Inbox, BarChart3 } from "lucide-react";
+import {
+  Upload,
+  Inbox,
+  BarChart3,
+  Mail,
+  Globe2,
+  Instagram,
+  Phone,
+} from "lucide-react";
 import { Button } from "../ui/button";
 
 interface SidebarProps {
@@ -46,7 +54,7 @@ export default function Sidebar({
         </p>
       </div>
 
-      <nav className="flex-1 p-4" aria-label="Navegação principal">
+      <nav className="flex-1 p-4 space-y-4" aria-label="Navegação principal">
         {menuItems.map((item) => (
           <Button
             key={item.id}
@@ -54,7 +62,7 @@ export default function Sidebar({
             variant={currentPage === item.id ? "default" : "ghost"}
             className={`w-full justify-start gap-3 mb-2 ${
               currentPage === item.id
-                ? "bg-neutral-900 text-white hover:bg-neutral-900/90"
+                ? "bg-neutral-900 text-white hover:bg-neutral-900/90 dark:text-fuchsia-500"
                 : "text-neutral-700 hover:bg-neutral-100"
             }`}
             aria-current={currentPage === item.id ? "page" : undefined}
@@ -64,6 +72,58 @@ export default function Sidebar({
             <span className="font-medium">{item.label}</span>
           </Button>
         ))}
+
+        <div className="pt-2 border-t border-border/60">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            Acessos rápidos
+          </p>
+          <div className="flex flex-col gap-2">
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2"
+            >
+              <a href="#" aria-label="Ver email">
+                <Mail className="h-4 w-4" />
+                <span>Ver email</span>
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2"
+            >
+              <a href="#" aria-label="Website">
+                <Globe2 className="h-4 w-4" />
+                <span>Website</span>
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2"
+            >
+              <a href="#" aria-label="WhatsApp">
+                <Phone className="h-4 w-4" />
+                <span>WhatsApp</span>
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2"
+            >
+              <a href="#" aria-label="Instagram">
+                <Instagram className="h-4 w-4" />
+                <span>Instagram</span>
+              </a>
+            </Button>
+          </div>
+        </div>
       </nav>
 
       <div className="p-4 border-t border-border">
